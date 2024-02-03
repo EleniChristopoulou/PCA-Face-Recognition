@@ -1,6 +1,6 @@
 clear all;
 clc;
-%close all;
+close all;
 
 load olivetti.mat;
 rows = 64;
