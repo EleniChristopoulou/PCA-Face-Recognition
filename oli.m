@@ -94,7 +94,7 @@ for i = 1:40
     for j = 1:(trainPercent/10) 
         w = weights((i-1)*(trainPercent/10)+ j,:) + w;
     end
-    personMeanWeight(i,:) = w/k;
+    personMeanWeight(i,:) = w/(trainPercent/10);
 end
 
 correct = 0;
