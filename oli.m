@@ -104,7 +104,7 @@ prediction = zeros(1,height(testSubset));
 for i = 1:height(testSubset)
     weight_test = (testSubset(i,:)-averageFace) *eigen_faces;
     for j = 1:40
-        euclidean_distance(j) = pdist([weight_test; personMeanWeight(j,:)], 'euclidean');
+        euclidean_distance(j) = pdist([weight_test; personMeanWeight(j,:)], 'cosine');
     end
     [min_value, min_index] = min(euclidean_distance); % the prediction
     prediction(i) = min_index;
